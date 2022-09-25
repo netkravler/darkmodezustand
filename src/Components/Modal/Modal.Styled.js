@@ -15,8 +15,8 @@ export const ModalStyled = styled.div`
 
   main {
     position: relative;
-    background-color: #fefefe;
-    color: ${({theme}) => theme.colors.OnBackground};
+    background-color: ${({theme}) => theme.colors.Surface};
+    color: ${({theme}) => theme.colors.OnSurface};
     margin: 5% auto; /* 15% from the top and centered */
 
     padding: 40px;

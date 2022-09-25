@@ -10,9 +10,7 @@ import Login from "../../Pages/Login/Login";
 import { useLoginStore } from "../../Pages/Login/useLoginStore";
 
 const AppRouter = () => {
-  const { loggedIn } = useLoginStore((store) => ({
-    loggedIn: store.loggedIn,
-  }));
+  const { loggedIn } = useLoginStore();
   return (
     <>
       <FlashMessages />

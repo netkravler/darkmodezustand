@@ -3,11 +3,7 @@ import { ModalStyled } from "./Modal.Styled";
 import { useModalStore } from "./useModalStore";
 
 const Modal = () => {
-  const { toggleModal, setToggleModal, modalPayload } = useModalStore((store) => ({
-    toggleModal: store.toggleModal,
-    setToggleModal: store.setToggleModal,
-    modalPayload: store.modalPayload,
-  }));
+  const { toggleModal, setToggleModal, modalPayload } = useModalStore();
 
   return (
     <ModalStyled showmodal={toggleModal}>

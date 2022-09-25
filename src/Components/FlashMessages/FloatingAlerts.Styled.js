@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
 export const Flashmessage = styled.span`
-  .floating-alert {
+  div {
     display: block;
     position: fixed;
-    z-index: 999;
+    z-index: 1200;
     top: 38px;
     left: 50%;
     transform: translateX(-50%);
-    -moz-animation: floatingAlert ease-in 5s forwards;
-    -webkit-animation: floatingAlert ease-in 5s forwards;
-    -o-animation: floatingAlert ease-in 5s forwards;
-    animation: floatingAlert ease-in 5s forwards;
+    -moz-animation: floatingAlert ease-in ${(props) => props.flashDuration}ms forwards;
+    -webkit-animation: floatingAlert ease-in ${(props) => props.flashDuration}ms forwards;
+    -o-animation: floatingAlert ease-in ${(props) => props.flashDuration}ms forwards;
+    animation: floatingAlert ease-in ${(props) => props.flashDuration}ms forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     background-color: ${({ theme }) => theme.colors.flashMessage};
@@ -21,11 +21,12 @@ export const Flashmessage = styled.span`
     border-radius: 5px;
     font-weight: 900;
     text-transform: uppercase;
-  }
+  
 
-  .floating-alerts .floating-alert:last-of-type {
+  &:last-of-type {
     display: block;
   }
+}
 
   @keyframes floatingAlert {
     0% {

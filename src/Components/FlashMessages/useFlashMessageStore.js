@@ -1,11 +1,9 @@
 import create from "zustand";
 
 const useFlashMessageStore = create((set) => ({
-  flashMessages: null,
-
-  setFlashMessage: (flashMessages) => set(() => ({ flashMessages: flashMessages })),
-  removeFlashMessage: () => set(() => ({ flashMessages: null })),
-
+  flashMessages: [],
+  flashDuration: 5000,
+  setFlashMessage: (flashMessages) => set((state) => ({ flashMessages: [...state.flashMessages, flashMessages] })),
 }));
 
 export default useFlashMessageStore;

@@ -7,9 +7,7 @@ import { useDarkmodeStore } from "./Components/DarkmodeSwitch/useDarkmodeStore";
 
 function App() {
   /** get value of theme from the themestore */
-  const { theme } = useDarkmodeStore((store) => ({
-    theme: store.theme,
-  }));
+  const { theme } = useDarkmodeStore();
 
   /**set theme to dark or light */
   const themeMode = theme === "light" ? lightTheme : darkTheme;

@@ -2,9 +2,7 @@ import React from "react";
 import useFlashMessageStore from "../FlashMessages/useFlashMessageStore";
 
 const UserProfile = () => {
-  const { setFlashMessage } = useFlashMessageStore((store) => ({
-    setFlashMessage: store.setFlashMessage,
-  }));
+  const { setFlashMessage } = useFlashMessageStore();
 
   return (
     <div>

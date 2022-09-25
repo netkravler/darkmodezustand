@@ -13,10 +13,7 @@ export const ThemeToggler = styled.div`
   z-index: 1000;
 `;
 export const Toggler = () => {
-  const { theme, setTheme } = useDarkmodeStore((store) => ({
-    theme: store.theme,
-    setTheme: store.setTheme,
-  }));
+  const { theme, setTheme } = useDarkmodeStore();
 
   const changeTheme = useCallback(() => {
     let change = theme === "light" ? "dark" : "light";

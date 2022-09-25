@@ -26,10 +26,7 @@ const MainNav = styled.ul`
 `;
 
 const Header = () => {
-  const { loggedIn, setLoggedOut } = useLoginStore((store) => ({
-    loggedIn: store.loggedIn,
-    setLoggedOut: store.setLoggedOut,
-  }));
+  const { loggedIn, setLoggedOut } = useLoginStore();
   return (
     <MainNav>
       <li>

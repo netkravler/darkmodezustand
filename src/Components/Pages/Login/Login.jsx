@@ -5,16 +5,9 @@ import { useLoginStore } from "./useLoginStore";
 import useFlashMessageStore from "../../FlashMessages/useFlashMessageStore";
 
 const Login = () => {
-  const { setLoggedIn, loggedIn, userInfo, userName } = useLoginStore((store) => ({
-    setLoggedIn: store.setLoggedIn,
-    loggedIn: store.loggedIn,
-    userInfo: store.userInfo,
-    userName: store.userName,
-  }));
+  const { setLoggedIn, loggedIn, userInfo, userName } = useLoginStore();
 
-  const { setFlashMessage } = useFlashMessageStore((store) => ({
-    setFlashMessage: store.setFlashMessage,
-  }));
+  const { setFlashMessage } = useFlashMessageStore();
 
   const [user, setUser] = useState({
     username: "",
